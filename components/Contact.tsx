@@ -23,20 +23,25 @@ export function Contact() {
     e.preventDefault()
     setStatus("loading")
 
-    try {
-      const response = await fetch("https://formspree.io/f/xyzdbowv", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-  name: formData.name,
-  email: formData.email,
-  message: formData.message,
-}),
+   try {
+const formspreeKey = process.env.NEXT_PUBLIC_FORMSPREE_KEY;
 
-      })
+if (!formspreeKey) {
+  throw new Error("Formspree key is missing! Check your .env setup.");
+}
+
+const response = await fetch(formspreeKey, {
+  method: "POST",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    name: formData.name,
+    email: formData.email,
+    message: formData.message,
+  }),
+}); 
 
       if (response.ok) {
         setStatus("success")
