@@ -30,7 +30,12 @@ export function Contact() {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+  name: formData.name,
+  email: formData.email,
+  message: formData.message,
+}),
+
       })
 
       if (response.ok) {
@@ -84,8 +89,8 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "muhira@gmail.com",
-      href: "mailto:muhira@gmail.com",
+      value: "muhira16@gmail.com",
+      href: "mailto:muhira16@gmail.com",
     },
     {
       icon: Phone,
