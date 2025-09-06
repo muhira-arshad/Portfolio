@@ -97,16 +97,16 @@ const response = await fetch(formspreeKey, {
       value: "muhira16@gmail.com",
       href: "mailto:muhira16@gmail.com",
     },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "03308430305",
-      href: "tel:03308430305",
-    },
+    // {
+    //   icon: Phone,
+    //   label: "Phone",
+    //   value: "03308430305",
+    //   href: "tel:03308430305",
+    // },
     {
       icon: MapPin,
       label: "Location",
-      value: "Canal City Lahore",
+      value: "Lahore",
       href: "#",
     },
   ]
