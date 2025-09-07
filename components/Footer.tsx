@@ -90,10 +90,8 @@ export function Footer() {
                 📧 muhira@gmail.com
               </a>
               <a
-                href="tel:03308430305"
                 className="block hover:text-glow-purple hover:text-purple-300 transition-all duration-300 font-futuristic"
               >
-                📱 03308430305
               </a>
             </div>
           </div>
